@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Достопримечательности - Путеводитель по Амурской области</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2f6f4e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a.active {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 100px auto 20px auto; /* отступ сверху под меню */
+            padding-top: 10px;
+        }
+
+        h2 {
+            padding-top: 60px; /* учитываем фиксированное меню */
+            margin-top: -60px; /* корректный переход по якорю */
+        }
+
+        .place {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .place img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .place-content {
+            padding: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ddd;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Путеводитель по Амурской области</h1>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="cities.html">Города</a>
+        <a href="nature.html">Природа</a>
+        <a href="animals.html">Животный мир</a>
+        <a href="history.html">История</a>
+        <a href="culture.html">Культура</a>
+        <a href="sights.html" class="active">Достопримечательности</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2 id="sights">Достопримечательности Амурской области</h2>
+
+    <div class="place">
+        <img src="images/vostochny.jpg" alt="Космодром Восточный">
+        <div class="place-content">
+            <h3>Космодром «Восточный»</h3>
+            <p>Современный российский космодром, расположенный в Амурской области. Один из самых значимых космических объектов страны.</p>
+        </div>
+    </div>
+
+    <div class="place">
+        <img src="images/festival.jpg" alt="Фестиваль Амурской области">
+        <div class="place-content">
+            <h3>Фестивали и праздники</h3>
+            <p>Популярные культурные и исторические мероприятия региона, привлекающие туристов и местных жителей.</p>
+        </div>
+    </div>
+
+    <div class="place">
+        <img src="images/naberezhnaya.jpg" alt="Набережная Благовещенска">
+        <div class="place-content">
+            <h3>Набережная Благовещенска</h3>
+            <p>Красивое место для прогулок с видом на реку Амур и китайский город Хэйхэ на противоположном берегу.</p>
+        </div>
+    </div>
+
+    <div class="place">
+        <img src="images/zhivopisnye_mesta.jpg" alt="Живописные места">
+        <div class="place-content">
+            <h3>Живописные природные и исторические места</h3>
+            <p>Разнообразные природные и исторические достопримечательности региона, которые стоит посетить каждому туристу.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Путеводитель по Амурской области</p>
+</footer>
+
+</body>
+</html>
