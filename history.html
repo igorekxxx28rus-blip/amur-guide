@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История - Путеводитель по Амурской области</title>
-
+    <title>История - Амурская область</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,23 +26,29 @@
 
 <div class="container">
     <div class="place" style="animation-delay:0s;">
-<img src="images/albazin.jpg" alt="Старый Альбазин">
-</div>
+        <img src="images/albazin.jpg" alt="Альбазин">
+    </div>
     <div class="place" style="animation-delay:0.1s;">
-<img src="images/transsib.jpg" alt="Транссиб">
-</div>
-    <div class="place" style="animation-delay:0.2s;">
-<img src="images/foto7.jpg" alt="Исторические здания">
-</div>
-    <div class="place" style="animation-delay:0.3s;">
-<img src="images/foto8.jpg" alt="Музеи">
-</div>
-
+        <img src="images/transsib.jpg" alt="Транссиб">
+    </div>
 </div>
 
 <footer>
     <p>© 2026 Путеводитель по Амурской области</p>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const splash = document.getElementById('splash');
+    if (!sessionStorage.getItem('splashShown')) {
+        sessionStorage.setItem('splashShown', 'true');
+        setTimeout(() => splash.classList.add('fade-out'), 1000);
+        setTimeout(() => splash.style.display = 'none', 2000);
+    } else {
+        splash.style.display = 'none';
+    }
+});
+</script>
 
 </body>
 </html>

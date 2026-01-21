@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Достопримечательности - Путеводитель по Амурской области</title>
-
+    <title>Достопримечательности - Амурская область</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,23 +26,29 @@
 
 <div class="container">
     <div class="place" style="animation-delay:0s;">
-<img src="images/vostochny.jpg" alt="Космодром Восточный">
-</div>
+        <img src="images/vostochny.jpg" alt="Космодром Восточный">
+    </div>
     <div class="place" style="animation-delay:0.1s;">
-<img src="images/festival.jpg" alt="Фестиваль">
-</div>
-    <div class="place" style="animation-delay:0.2s;">
-<img src="images/foto11.jpg" alt="Памятник">
-</div>
-    <div class="place" style="animation-delay:0.3s;">
-<img src="images/foto12.jpg" alt="Достопримечательность">
-</div>
-
+        <img src="images/festival.jpg" alt="Фестиваль">
+    </div>
 </div>
 
 <footer>
     <p>© 2026 Путеводитель по Амурской области</p>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const splash = document.getElementById('splash');
+    if (!sessionStorage.getItem('splashShown')) {
+        sessionStorage.setItem('splashShown', 'true');
+        setTimeout(() => splash.classList.add('fade-out'), 1000);
+        setTimeout(() => splash.style.display = 'none', 2000);
+    } else {
+        splash.style.display = 'none';
+    }
+});
+</script>
 
 </body>
 </html>
