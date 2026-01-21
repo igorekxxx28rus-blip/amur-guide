@@ -1,0 +1,148 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2f6f4e;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.active {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 130px auto 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.place {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.place img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.place:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.place:hover img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #ddd;
+    margin-top: 30px;
+}
+
+/* 📱 Адаптация под телефоны */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .place {
+        width: 100%;
+        max-width: 350px;
+        height: 220px;
+    }
+}
+
+/* Экран-заставка */
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2f6f4e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: splashFade 1.5s forwards;
+}
+
+#splash h1 {
+    color: white;
+    font-size: 32px;
+    animation: zoomIn 1s ease;
+}
+
+@keyframes splashFade {
+    0%   { opacity: 1; }
+    70%  { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to   { transform: scale(1); }
+}

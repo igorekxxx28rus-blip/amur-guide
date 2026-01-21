@@ -5,133 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Природа - Путеводитель по Амурской области</title>
 
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Амурская область">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Амурская область">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2f6f4e">
 
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#2f6f4e">
-
-
-    <style>
-
-/* 📱 Адаптация под телефоны */
-@media (max-width: 768px) {
-
-    header {
-        padding: 15px 10px;
-    }
-
-    header h1 {
-        font-size: 20px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    nav a {
-        font-size: 14px;
-        margin: 0;
-    }
-
-    .container {
-        margin-top: 140px;
-        padding: 0 10px;
-    }
-
-    .place {
-        width: 100%;
-        max-width: 350px;
-        height: 220px;
-    }
-}
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #2f6f4e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        nav a.active {
-            color: #ffd700;
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 100px auto 20px auto; /* отступ сверху под меню */
-            padding-top: 10px;
-        }
-
-        h2 {
-            padding-top: 60px; /* учитываем фиксированное меню */
-            margin-top: -60px; /* корректный переход по якорю */
-        }
-
-        .place {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-
-        .place img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .place-content {
-            padding: 15px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #ddd;
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<div id="splash">
+    <h1>Амурская область</h1>
+</div>
+
 <header>
-    <h1>Путеводитель по Амурской области</h1>
     <nav>
         <a href="index.html">Главная</a>
         <a href="cities.html">Города</a>
@@ -144,39 +36,18 @@
 </header>
 
 <div class="container">
-    <h2 id="nature">Природа Амурской области</h2>
-
-    <div class="place">
-        <img src="images/foto2.jpg" alt="Хинганские горы">
-        <div class="place-content">
-            <h3>Хинганские горы</h3>
-            <p>Хинганские горы – живописный природный район Амурской области с богатой флорой и фауной. Отличное место для походов и отдыха на природе.</p>
-        </div>
-    </div>
-
-    <div class="place">
-        <img src="images/khingan.jpg" alt="Природный заповедник">
-        <div class="place-content">
-            <h3>Природный заповедник «Зейский»</h3>
-            <p>Природный заповедник на северо-востоке области. Здесь можно увидеть редких животных, множество птиц и уникальные ландшафты.</p>
-        </div>
-    </div>
-
-    <div class="place">
-        <img src="images/zeia.jpg" alt="Река Зея">
-        <div class="place-content">
-            <h3>Река Зея</h3>
-            <p>Одна из крупнейших рек региона, с живописными берегами, популярная для рыбалки и сплава на байдарках.</p>
-        </div>
-    </div>
-
-    <div class="place">
-        <img src="images/les.jpg" alt="Лесные массивы">
-        <div class="place-content">
-            <h3>Лесные массивы Амурской области</h3>
-            <p>Обширные лесные территории с разнообразной флорой и фауной. Отличное место для экологического туризма и походов.</p>
-        </div>
-    </div>
+    <div class="place" style="animation-delay:0s;">
+<img src="images/foto2.jpg" alt="Зейское водохранилище">
+</div>
+    <div class="place" style="animation-delay:0.1s;">
+<img src="images/khingan.jpg" alt="Хинган">
+</div>
+    <div class="place" style="animation-delay:0.2s;">
+<img src="images/foto5.jpg" alt="Амурская тайга">
+</div>
+    <div class="place" style="animation-delay:0.3s;">
+<img src="images/foto6.jpg" alt="Леса">
+</div>
 
 </div>
 
