@@ -1,4 +1,3 @@
-/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +7,7 @@ body {
 header {
     background-color: #2f6f4e;
     color: white;
-    padding: 15px 10px;
+    padding: 20px;
     text-align: center;
     position: fixed;
     top: 0;
@@ -16,24 +15,15 @@ header {
     z-index: 1000;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
 nav {
     margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    margin: 0 10px;
     font-weight: bold;
-    font-size: 15px;
 }
 
 nav a:hover {
@@ -47,12 +37,11 @@ nav a.active {
 
 .container {
     max-width: 1200px;
-    margin: 130px auto 20px auto;
+    margin: 120px auto 20px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
-    padding: 0 10px;
 }
 
 .place {
@@ -63,6 +52,7 @@ nav a.active {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: transform 0.5s, box-shadow 0.5s;
     cursor: pointer;
+    position: relative;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s forwards;
@@ -84,6 +74,27 @@ nav a.active {
     transform: scale(1.1) rotate(2deg);
 }
 
+/* Текст при наведении */
+.place-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 8px 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.place:hover .place-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -96,53 +107,4 @@ footer {
     padding: 15px;
     background: #ddd;
     margin-top: 30px;
-}
-
-/* 📱 Адаптация под телефоны */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 20px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
-    .place {
-        width: 100%;
-        max-width: 350px;
-        height: 220px;
-    }
-}
-
-/* Экран-заставка */
-#splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #2f6f4e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    animation: splashFade 1.5s forwards;
-}
-
-#splash h1 {
-    color: white;
-    font-size: 32px;
-    animation: zoomIn 1s ease;
-}
-
-@keyframes splashFade {
-    0%   { opacity: 1; }
-    70%  { opacity: 1; }
-    100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes zoomIn {
-    from { transform: scale(0.8); }
-    to   { transform: scale(1); }
 }

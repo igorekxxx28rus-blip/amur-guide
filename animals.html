@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Животный мир - Амурская область</title>
+    <title>Животный мир - Путеводитель по Амурской области</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<div id="splash"><h1>Амурская область</h1></div>
 
 <header>
     <nav>
@@ -23,40 +21,27 @@
 </header>
 
 <div class="container">
-    <div class="place" style="animation-delay:0s;">
+    <a href="#" class="place" style="animation-delay:0s;">
         <img src="images/amur_tiger.jpg" alt="Амурский тигр">
-        <div class="place-content"><h3>Амурский тигр</h3></div>
-    </div>
-    <div class="place" style="animation-delay:0.1s;">
-        <img src="images/leopard.jpg" alt="Дальневосточный леопард">
-        <div class="place-content"><h3>Дальневосточный леопард</h3></div>
-    </div>
-    <div class="place" style="animation-delay:0.2s;">
+        <div class="place-content">Амурский тигр</div>
+    </a>
+    <a href="#" class="place" style="animation-delay:0.1s;">
+        <img src="images/far_east_leopard.jpg" alt="Дальневосточный леопард">
+        <div class="place-content">Дальневосточный леопард</div>
+    </a>
+    <a href="#" class="place" style="animation-delay:0.2s;">
         <img src="images/brown_bear.jpg" alt="Бурый медведь">
-        <div class="place-content"><h3>Бурый медведь</h3></div>
-    </div>
-    <div class="place" style="animation-delay:0.3s;">
+        <div class="place-content">Бурый медведь</div>
+    </a>
+    <a href="#" class="place" style="animation-delay:0.3s;">
         <img src="images/sobol.jpg" alt="Соболь">
-        <div class="place-content"><h3>Соболь</h3></div>
-    </div>
+        <div class="place-content">Соболь</div>
+    </a>
 </div>
 
 <footer>
     <p>© 2026 Путеводитель по Амурской области</p>
 </footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const splash = document.getElementById('splash');
-    if (!sessionStorage.getItem('splashShown')) {
-        sessionStorage.setItem('splashShown', 'true');
-        setTimeout(() => splash.classList.add('fade-out'), 1000);
-        setTimeout(() => splash.style.display = 'none', 2000);
-    } else {
-        splash.style.display = 'none';
-    }
-});
-</script>
 
 </body>
 </html>

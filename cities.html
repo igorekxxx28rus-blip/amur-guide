@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Города - Амурская область</title>
+    <title>Города - Путеводитель по Амурской области</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<div id="splash"><h1>Амурская область</h1></div>
 
 <header>
     <nav>
@@ -23,33 +21,19 @@
 </header>
 
 <div class="container">
-    <div class="place" style="animation-delay:0s;">
+    <a href="#" class="place" style="animation-delay:0s;">
         <img src="images/foto1.jpg" alt="Благовещенск">
-        <div class="place-content"><h3>Благовещенск</h3></div>
-    </div>
-    <div class="place" style="animation-delay:0.1s;">
+        <div class="place-content">Благовещенск</div>
+    </a>
+    <a href="#" class="place" style="animation-delay:0.1s;">
         <img src="images/svobodny.jpg" alt="Свободный">
-        <div class="place-content"><h3>Свободный</h3></div>
-    
-    </div>
+        <div class="place-content">Свободный</div>
+    </a>
 </div>
 
 <footer>
     <p>© 2026 Путеводитель по Амурской области</p>
 </footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const splash = document.getElementById('splash');
-    if (!sessionStorage.getItem('splashShown')) {
-        sessionStorage.setItem('splashShown', 'true');
-        setTimeout(() => splash.classList.add('fade-out'), 1000);
-        setTimeout(() => splash.style.display = 'none', 2000);
-    } else {
-        splash.style.display = 'none';
-    }
-});
-</script>
 
 </body>
 </html>

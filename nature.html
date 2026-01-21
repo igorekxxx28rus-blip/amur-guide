@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Природа - Амурская область</title>
+    <title>Природа - Путеводитель по Амурской области</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<div id="splash"><h1>Амурская область</h1></div>
 
 <header>
     <nav>
@@ -23,36 +21,23 @@
 </header>
 
 <div class="container">
-    <div class="place" style="animation-delay:0s;">
-        <img src="images/zeia.jpg" alt="Река Зея">
-        <div class="place-content"><h3>Река Зея</h3></div>
-    </div>
-    <div class="place" style="animation-delay:0.1s;">
-        <img src="images/les.jpg" alt="Лесные массивы">
-        <div class="place-content"><h3>Лесные массивы</h3></div>
-    </div>
-    <div class="place" style="animation-delay:0.2s;">
-        <img src="images/khingan.jpg" alt="Хинганский заповедник">
-        <div class="place-content"><h3>Хинганский заповедник</h3></div>
-    </div>
+    <a href="#" class="place" style="animation-delay:0s;">
+        <img src="images/zeya_river.jpg" alt="Река Зея">
+        <div class="place-content">Река Зея</div>
+    </a>
+    <a href="#" class="place" style="animation-delay:0.1s;">
+        <img src="images/forest.jpg" alt="Лесные массивы">
+        <div class="place-content">Лесные массивы</div>
+    </a>
+    <a href="#" class="place" style="animation-delay:0.2s;">
+        <img src="images/khingan_reserve.jpg" alt="Хинганский заповедник">
+        <div class="place-content">Хинганский заповедник</div>
+    </a>
 </div>
 
 <footer>
     <p>© 2026 Путеводитель по Амурской области</p>
 </footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const splash = document.getElementById('splash');
-    if (!sessionStorage.getItem('splashShown')) {
-        sessionStorage.setItem('splashShown', 'true');
-        setTimeout(() => splash.classList.add('fade-out'), 1000);
-        setTimeout(() => splash.style.display = 'none', 2000);
-    } else {
-        splash.style.display = 'none';
-    }
-});
-</script>
 
 </body>
 </html>
